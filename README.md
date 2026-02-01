@@ -174,5 +174,3 @@ ROS 2 | Computer Vision | Autonomous Robotics
 
 Apache License 2.0
 
----n this in **viva language**
-* map each BT node directly to your code functions
