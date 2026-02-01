@@ -1,34 +1,27 @@
-from setuptools import find_packages, setup
-from glob import glob
-import os
+from setuptools import setup
 
 package_name = 'vision_person_follower'
 
 setup(
     name=package_name,
-    version='0.0.0',
-    packages=find_packages(exclude=['test']),
-
+    version='0.0.1',
+    packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        (os.path.join('share', package_name, 'msg'),
-            glob('msg/*.msg')),
+        ('share/' + package_name + '/launch',
+            ['launch/empty_world_follow.launch.py']),
     ],
-
     install_requires=['setuptools'],
     zip_safe=True,
-
-    maintainer='harsha',
+    maintainer='Harsha',
     maintainer_email='harshachintagunta@gmail.com',
-    description='Vision-based person follower using YOLO and DeepSORT',
-    license='Apache-2.0',
-
+    description='Vision-based person follower using YOLOv8, DeepSORT, and LiDAR',
+    license='Apache License 2.0',
     entry_points={
         'console_scripts': [
-            'perception_node = vision_person_follower.perception_node:main',
-            'controller_node = vision_person_follower.controller_node:main',
+            'vision_follower = vision_person_follower.controller_node:main',
         ],
     },
 )
