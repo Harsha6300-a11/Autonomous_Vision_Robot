@@ -161,10 +161,10 @@ ros2 launch vision_person_follower vision_person_follower.launch.py
 ---
 
 ## Author
-Harsha Chintgaunta
-Ashvin Dandothkar
-Harish Enugu Reddy
-Pranav
+* Harsha Chintgaunta
+* Ashvin Dandothkar
+* Harish Enugu Reddy
+* Pranav
 
 ROS 2 | Computer Vision | Autonomous Robotics
 
